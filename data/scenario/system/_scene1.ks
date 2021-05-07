@@ -2,4 +2,5 @@
 [preload  storage="./data/bgimage/ComicPageOne.png"  ]
 [preload  storage="./data/bgimage/ComicPageTwo.png"  ]
 [preload  storage="./data/bgimage/ComicPageThree.png"  ]
+[preload  storage="./data/bgimage/ComicPageFour.png"  ]
 [return]
