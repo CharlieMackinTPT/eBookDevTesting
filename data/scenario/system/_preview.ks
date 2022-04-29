@@ -1,3 +1,4 @@
+[hidemenubutton] 
 [preload  storage="./data/bgimage/Slide1.jpg"  ]
 [preload  storage="./data/bgimage/Slide2.jpg"  ]
 [preload  storage="./data/bgimage/Slide3.jpg"  ]
@@ -17,4 +18,4 @@
 [preload  storage="./data/bgimage/Slide17.jpg"  ]
 [preload  storage="./data/bgimage/Slide18.jpg"  ]
 [preload  storage="./data/bgimage/Slide19.jpg"  ]
-[return]
+[return] 

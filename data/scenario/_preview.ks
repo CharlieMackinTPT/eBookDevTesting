@@ -1,15 +1,11 @@
-[_tb_system_call storage=system/_scene1.ks]
+[_tb_system_call storage=system/_preview.ks ]
 
+[mask time=10]
+[mask_off time=10]
 [cm  ]
 [bg  storage="Slide1.jpg"  time="1000"  ]
-[glink  color="black"  storage="scene1.ks"  size="20"  text="English"  x="350"  y="200"  width="200"  height="0"  target="*English"  ]
-[glink  color="black"  storage="scene1.ks"  size="20"  text="Spanish"  x="350"  y="300"  width="200"  height="0"  target="*Spanish"  ]
-[s  ]
-*Spanish
-
-[jump  storage="Spanish.ks"  target="*Spanish"  ]
-*English
-
+[l  ]
+[glink  color="black"  storage="scene1.ks"  size="20"  text="English&nbsp;or&nbsp;Spanish?"  x="500"  y="500"  width="500"  height="500"  ]
 [bg  time="1000"  method="crossfade"  storage="Slide2.jpg"  ]
 [l  ]
 [bg  time="1000"  method="crossfade"  storage="Slide3.jpg"  ]
