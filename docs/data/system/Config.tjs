@@ -7,8 +7,8 @@
 ;patch_apply_auto=true
 ;ScreenCentering=true
 ;useCamera=true
-;scWidth=1920
-;scHeight=1200
+;scWidth=1280
+;scHeight=800
 ;chSpeed=30
 ;chSpeeds.fast=10
 ;chSpeeds.normal=30
