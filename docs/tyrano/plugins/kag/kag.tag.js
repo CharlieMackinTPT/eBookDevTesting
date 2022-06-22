@@ -1952,6 +1952,9 @@ function testClick(event)
 	console.log("Event: ", event);
 	console.log("Event dataset: ", event.dataset.eventPm);
 	console.log("Event dataset: ", JSON.parse(event.dataset.eventPm).target);
+
+	var pageNumber = JSON.parse(event.dataset.eventPm).target.split("*Page")[1];
+	pageNumber = "Pg. " + pageNumber;
 	
 	if(document.getElementById("pgnumber") != null)
 	{
@@ -1960,12 +1963,10 @@ function testClick(event)
 
 
 	const h1 = document.createElement("H1");
-	const textNode = document.createTextNode(JSON.parse(event.dataset.eventPm).target);
+	const textNode = document.createTextNode(pageNumber);
 	h1.style.position = "absolute";
-	h1.style.left = "70%";
-	h1.style.top = "20%";
-	h1.color = "red";
-	h1.id = "pgnumber"
+	h1.id = "pgnumber";
+	h1.className = "pageNum";
 	h1.appendChild(textNode);
 	document.body.appendChild(h1);
 }
