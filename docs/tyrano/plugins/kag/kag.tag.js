@@ -1962,7 +1962,7 @@ function testClick(event)
 	const h1 = document.createElement("H1");
 	const textNode = document.createTextNode(JSON.parse(event.dataset.eventPm).target);
 	h1.style.position = "absolute";
-	h1.style.left = "90%";
+	h1.style.left = "70%";
 	h1.style.top = "20%";
 	h1.color = "red";
 	h1.id = "pgnumber"
