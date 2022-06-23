@@ -1946,25 +1946,45 @@ tyrano.plugin.kag.tag.free_layermode = {
 	}
 };
 
+var previousTimeDate = new Date();
+var previousTimeElapsed = previousTimeDate.getTime();
+var trackTime = 0;
 function buttonClick(event)
 {
+	//Set up page number
 	var pageNumber = JSON.parse(event.dataset.eventPm).target.split("*Page")[1];
-	pageNumber = "Pg. " + pageNumber;
+	var pageNumberText = "Pg. " + pageNumber;
 	
 	if(document.getElementById("pgnumber") != null)
 	{
 		document.getElementById("pgnumber").remove();
 	}
 
-
-
 	const h1 = document.createElement("H1");
-	const textNode = document.createTextNode(pageNumber);
+	const textNode = document.createTextNode(pageNumberText);
 	h1.style.position = "absolute";
 	h1.id = "pgnumber";
 	h1.className = "pageNum";
 	h1.appendChild(textNode);
 	document.body.appendChild(h1);
 
-	googleAnalyticsTelemetry.LogTelemetry("tap", JSON.parse(event.dataset.eventPm).text);
+	//Time Logging
+	var currentTime = new Date();
+	var currrentTimeElapsed = currentTime.getTime();
+	var timeElapsed = 0;
+
+	timeElapsed = currrentTimeElapsed- previousTimeElapsed;
+	previousTimeElapsed = currrentTimeElapsed;
+
+	//console.log("Seconds viewing page: " + (parseInt(pageNumber) - 1) + " is " + timeElapsed / 1000);
+
+	var buttonText = JSON.parse(event.dataset.eventPm).text;
+	googleAnalyticsTelemetry.LogTelemetry("tap", buttonText);
+
+	var data = {
+		"pageNumber" : (parseInt(pageNumber) - 1),
+		"timeElapsed" : timeElapsed/1000
+	};
+
+	googleAnalyticsTelemetry.LogTelemetry("timeToReadPage", JSON.stringify(data));
 }
