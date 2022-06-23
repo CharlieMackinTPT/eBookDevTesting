@@ -1484,7 +1484,7 @@ tyrano.plugin.kag.tag.glink = {
 		var target_layer = null;
 		target_layer = this.kag.layer.getFreeLayer();
 		target_layer.css("z-index", 999999);
-		var j_button = $("<div class='glink_button' onclick='testClick(this)'>" + pm.text + "</div>");
+		var j_button = $("<div class='glink_button' onclick='buttonClick(this)'>" + pm.text + "</div>");
 		j_button.css("position", "absolute");
 		j_button.css("cursor", "pointer");
 		j_button.css("z-index", 99999999);
@@ -1946,12 +1946,10 @@ tyrano.plugin.kag.tag.free_layermode = {
 	}
 };
 
-function testClick(event)
+function buttonClick(event)
 {
-	console.log("I've been clicked!");
-	console.log("Event: ", event);
-	console.log("Event dataset: ", event.dataset.eventPm);
-	console.log("Event dataset: ", JSON.parse(event.dataset.eventPm).target);
+	var pageNumber = JSON.parse(event.dataset.eventPm).target.split("*Page")[1];
+	pageNumber = "Pg. " + pageNumber;
 	
 	if(document.getElementById("pgnumber") != null)
 	{
@@ -1959,13 +1957,14 @@ function testClick(event)
 	}
 
 
+
 	const h1 = document.createElement("H1");
-	const textNode = document.createTextNode(JSON.parse(event.dataset.eventPm).target);
+	const textNode = document.createTextNode(pageNumber);
 	h1.style.position = "absolute";
-	h1.style.left = "90%";
-	h1.style.top = "20%";
-	h1.color = "red";
-	h1.id = "pgnumber"
+	h1.id = "pgnumber";
+	h1.className = "pageNum";
 	h1.appendChild(textNode);
 	document.body.appendChild(h1);
+
+	googleAnalyticsTelemetry.LogTelemetry("tap", JSON.parse(event.dataset.eventPm).text);
 }
