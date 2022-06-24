@@ -1986,5 +1986,5 @@ function buttonClick(event)
 		"timeElapsed" : timeElapsed/1000
 	};
 
-	googleAnalyticsTelemetry.LogTelemetry("timeToReadPage", JSON.stringify(data));
+	googleAnalyticsTelemetry.LogTelemetry("readTime", JSON.stringify(data));
 }
