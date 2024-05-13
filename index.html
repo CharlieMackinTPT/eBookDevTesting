@@ -6,8 +6,8 @@
     <title>Unity WebGL Player | eBook</title>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-    <canvas id="unity-canvas" width=640 height=360 tabindex="-1" style="width: 100%; height: 100%; background: #231F20"></canvas>
-    <script src="Build/eBook5.loader.js"></script>
+    <canvas id="unity-canvas" width=1920 height=1080 tabindex="-1" style="width: 1920px; height: 1080px; background: #CCCCCC"></canvas>
+    <script src="Build/eBookTest.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
@@ -25,14 +25,14 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/eBook5.data",
-        frameworkUrl: "Build/eBook5.framework.js",
-        codeUrl: "Build/eBook5.wasm",
+        dataUrl: "Build/eBookTest.data.br",
+        frameworkUrl: "Build/eBookTest.framework.js.br",
+        codeUrl: "Build/eBookTest.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "eBook",
         productVersion: "1.0",
-        matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
     </script>
