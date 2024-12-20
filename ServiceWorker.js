@@ -1,9 +1,9 @@
 const cacheName = "DefaultCompany-eBook-1.0";
 const contentToCache = [
-    "Build/BusinessBuild.loader.js",
-    "Build/BusinessBuild.framework.js",
-    "Build/BusinessBuild.data",
-    "Build/BusinessBuild.wasm",
+    "Build/HealthBuild.loader.js",
+    "Build/HealthBuild.framework.js",
+    "Build/HealthBuild.data",
+    "Build/HealthBuild.wasm",
     "TemplateData/style.css"
 
 ];
