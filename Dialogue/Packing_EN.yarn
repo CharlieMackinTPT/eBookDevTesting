@@ -1,0 +1,23 @@
+title: Tutorial_FirstBox
+---
+Here comes a box!
+Okay, which plant do we pack?
+Nice job!
+===
+
+title: Tutorial_SecondBox
+---
+Here comes another one!
+Which plants do we put in here?
+->  Correct
+    Nice job!
+-> PartialCorrect
+    Hey, you got one!
+-> Incorrect
+    Hmmm, let's try that again.
+===
+
+title: PauseScreen
+---
+Try to remember these plants and symbols! Let's pack another box!
+===

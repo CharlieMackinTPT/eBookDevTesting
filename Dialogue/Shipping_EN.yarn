@@ -1,0 +1,33 @@
+title: Shipping
+---
+<<jump PauseScreen>>
+===
+
+title: Tutorial_Go
+---
+Here comes a box!
+Should we ship that box? Press Pause!
+It looks like we only ship boxes with this symbol on it!
+Tap the box to ship it!
+Nice job!
+<<jump Tutorial_NoGo>>
+===
+
+title: Tutorial_NoGo
+---
+Do we ship this one or let it pass?
+->  Correct
+    Nice job! We let those pass.
+-> Incorrect
+    Hmmm, looks like we DON'T ship those ones.
+===
+
+title: PauseScreen
+---
+We need to ship the boxes with these symbols!
+===
+
+title: PauseScreen_Tutorial
+---
+Looks like we only need to ship the boxes with this symbol!
+===

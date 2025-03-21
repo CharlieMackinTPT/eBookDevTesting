@@ -1,0 +1,17 @@
+title: FirstCustomer
+---
+Here comes a customer now!
+Okay! What symbol matches this plant?
+Great! Now we can ring them up!
+Great job! If you need help, just press pause!
+===
+
+title: Cashier_Help
+---
+Try to remember which plants have these symbols!
+===
+
+title: PauseScreen
+---
+Try to remember these plants and symbols! Let's help another customer!
+===
